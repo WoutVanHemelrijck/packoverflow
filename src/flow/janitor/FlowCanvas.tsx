@@ -11,7 +11,7 @@ import { Card, ConnectorIcon, JanitorAvatar, cn } from "@/flow/ui";
 import { connectedDocIds, connectedHealth } from "@/flow/janitor/connected";
 import { buildArticles } from "@/flow/janitor/model";
 
-const H = 232;
+const H = 300;
 const PAD = 16;
 const SRC_W = 176;
 const TRUTH_W = 156;
@@ -155,7 +155,7 @@ export function FlowCanvas() {
   const janY = mid - JAN_H / 2;
 
   const n = Math.max(1, groups.length);
-  const nodeH = n > 4 ? 30 : 40;
+  const nodeH = n > 4 ? 36 : 46;
   const gap = n > 4 ? 6 : 10;
   const stackH = n * nodeH + (n - 1) * gap;
   const srcTop = (i: number) => mid - stackH / 2 + i * (nodeH + gap);
@@ -196,8 +196,10 @@ export function FlowCanvas() {
             return (
               <div
                 key={g.id}
+                onClick={() => setStep("connectors")}
+                title="Open Connectors"
                 className={cn(
-                  "absolute flex items-center gap-2.5 px-2.5 rounded-[12px] border bg-bg shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors",
+                  "absolute flex items-center gap-2.5 px-2.5 rounded-[12px] border bg-bg shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors cursor-pointer hover:border-ink/30",
                   active ? "border-agent/50 ring-2 ring-agent-soft" : "border-line",
                 )}
                 style={{ left: PAD, top: srcTop(i), width: SRC_W, height: nodeH }}
@@ -261,8 +263,10 @@ export function FlowCanvas() {
               return (
                 <div key={s.name} className="relative">
                   <div
+                    onClick={s.name === "Rules" || s.name === "AI jury" ? () => setStep("rules") : undefined}
                     className={cn(
                       "rounded-[8px] border px-2 py-1.5 transition-colors duration-150",
+                      (s.name === "Rules" || s.name === "AI jury") && "cursor-pointer hover:border-ink/30",
                       on ? "border-agent bg-agent-soft" : "border-line bg-[#fafafa]",
                     )}
                     title={s.detail}
@@ -287,7 +291,9 @@ export function FlowCanvas() {
         </div>
 
         <div
-          className={cn("absolute rounded-[12px] border bg-bg shadow-[0_1px_2px_rgba(0,0,0,0.04)] p-3", done.length ? "border-settled/40" : "border-line")}
+          onClick={() => setStep("search")}
+          title="Search the ground truth"
+          className={cn("absolute rounded-[12px] border bg-bg shadow-[0_1px_2px_rgba(0,0,0,0.04)] p-3 cursor-pointer hover:border-settled", done.length ? "border-settled/40" : "border-line")}
           style={{ left: truthX, top: mid - 52, width: TRUTH_W, height: 104 }}
         >
           <div className="flex items-center gap-1.5 text-[12.5px] font-semibold text-ink">
@@ -310,7 +316,9 @@ export function FlowCanvas() {
         </div>
 
         <div
-          className="absolute rounded-[12px] border border-line bg-bg shadow-[0_1px_2px_rgba(0,0,0,0.04)] p-3"
+          onClick={() => setStep("agent")}
+          title="Ask Claude over MCP"
+          className="absolute rounded-[12px] border border-line bg-bg shadow-[0_1px_2px_rgba(0,0,0,0.04)] p-3 cursor-pointer hover:border-ink/30"
           style={{ left: mcpX, top: mid - 62, width: MCP_W, height: 124 }}
         >
           <div className="text-[12.5px] font-semibold text-ink">MCP</div>

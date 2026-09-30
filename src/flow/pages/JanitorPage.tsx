@@ -74,6 +74,7 @@ export default function JanitorPage() {
     ? `Cleaning ${done + 1} of ${n} files`
     : `All ${n} files clean. ${needsYou.length ? `${needsYou.length} conflict${needsYou.length === 1 ? " needs" : "s need"} you.` : "Every fact is settled."}`;
 
+  const showSpotlight = Boolean(spotlight && (running || spotlight.status === "human"));
   return (
     <div className="flex flex-col gap-5">
       <div className="flex items-center justify-between gap-6">
@@ -91,11 +92,10 @@ export default function JanitorPage() {
         )}
       </div>
 
+      <HealthStrip now={now} raw={raw} series={history.series} total={Math.max(history.series.length, n + 1)} showCertainty={done > 0} />
       <FlowCanvas />
 
-      <HealthStrip now={now} raw={raw} series={history.series} total={Math.max(history.series.length, n + 1)} showCertainty={done > 0} />
-
-      <div className="grid grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-5 items-start">
+      <div className={cn("grid gap-5 items-start", showSpotlight ? "grid-cols-[minmax(0,3fr)_minmax(0,2fr)]" : "grid-cols-1")}>
         <div className="min-w-0">
           <div className="flex items-center gap-1 mb-2.5">
             {(["queue", "conflicts"] as const).map((t) => (
@@ -134,10 +134,11 @@ export default function JanitorPage() {
           )}
         </div>
 
-        <div className="min-w-0 flex flex-col gap-5">
-          <ConflictSpotlight conflict={spotlight} articles={articles} running={running} onReview={setOpenClaim} />
-          <Constitution use={articleUse(doneSteps)} readOnly compact onEdit={() => setStep("rules")} />
-        </div>
+        {showSpotlight && spotlight && (
+          <div className="min-w-0">
+            <ConflictSpotlight conflict={spotlight} articles={articles} running={running} onReview={setOpenClaim} />
+          </div>
+        )}
       </div>
 
       <ConflictDrawer
