@@ -127,8 +127,24 @@ function requestToken(): Promise<string> {
   });
 }
 
-async function listPdfs(token: string): Promise<DriveFile[]> {
-  const query = [`mimeType='application/pdf'`, "trashed=false", FOLDER_ID ? `'${FOLDER_ID}' in parents` : ""].filter(Boolean).join(" and ");
+interface DriveFolder {
+  id: string;
+  name: string;
+}
+
+async function listFolders(token: string): Promise<DriveFolder[]> {
+  const url = new URL("https://www.googleapis.com/drive/v3/files");
+  url.searchParams.set("q", "mimeType='application/vnd.google-apps.folder' and trashed=false");
+  url.searchParams.set("fields", "files(id,name)");
+  url.searchParams.set("pageSize", "50");
+  url.searchParams.set("orderBy", "modifiedTime desc");
+  const response = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
+  if (!response.ok) throw new Error(`Drive answered ${response.status}`);
+  return ((await response.json()) as { files?: DriveFolder[] }).files ?? [];
+}
+
+async function listPdfs(token: string, folderId: string | null = FOLDER_ID ?? null): Promise<DriveFile[]> {
+  const query = [`mimeType='application/pdf'`, "trashed=false", folderId ? `'${folderId}' in parents` : ""].filter(Boolean).join(" and ");
   const url = new URL("https://www.googleapis.com/drive/v3/files");
   url.searchParams.set("q", query);
   url.searchParams.set("fields", "files(id,name,size,modifiedTime)");
@@ -153,7 +169,7 @@ function DriveGlyph({ size = 16 }: { size?: number }) {
   );
 }
 
-type Status = "idle" | "connecting" | "listing" | "done" | "error";
+type Status = "idle" | "connecting" | "picking" | "listing" | "done" | "error";
 
 /** "Google Drive" in the connector row. Real when a client id is configured, demo otherwise. */
 export function GoogleDriveConnect({
@@ -218,24 +234,42 @@ export function GoogleDriveCard({ onFiles }: { onFiles: (files: DriveFile[]) => 
   const [status, setStatus] = useState<Status>("idle");
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState<string | null>(null);
+  const [token, setToken] = useState<string | null>(null);
+  const [folders, setFolders] = useState<DriveFolder[]>([]);
+  const [folderId, setFolderId] = useState<string>("");
   const live = Boolean(CLIENT_ID);
   const busy = status === "connecting" || status === "listing";
 
 
+  async function importFrom(accessToken: string, folder: string | null) {
+    try {
+      setStatus("listing");
+      const [files, email] = await Promise.all([listPdfs(accessToken, folder), whoAmI(accessToken)]);
+      onFiles(files);
+      setCount(files.length);
+      setStatus("done");
+      saveConnection({ email, count: files.length, at: new Date().toISOString() });
+      if (!files.length) setMessage("No PDFs in this folder");
+    } catch (error) {
+      setStatus("error");
+      setMessage(error instanceof Error ? error.message : "Google Drive did not answer");
+    }
+  }
+
+  // Sign in, then let the user pick which Drive folder the janitor reads (unless one is fixed in the env).
   async function connect() {
     if (busy) return;
     try {
       setStatus("connecting");
       setMessage(null);
       await loadGoogleIdentity();
-      const token = await requestToken();
-      setStatus("listing");
-      const [files, email] = await Promise.all([listPdfs(token), whoAmI(token)]);
-      onFiles(files);
-      setCount(files.length);
-      setStatus("done");
-      saveConnection({ email, count: files.length, at: new Date().toISOString() });
-      if (!files.length) setMessage("No PDFs in this Drive");
+      const accessToken = await requestToken();
+      setToken(accessToken);
+      if (FOLDER_ID) return importFrom(accessToken, FOLDER_ID);
+      const found = await listFolders(accessToken);
+      setFolders(found);
+      setFolderId(found[0]?.id ?? "");
+      setStatus("picking");
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Google Drive did not answer");
@@ -266,6 +300,25 @@ export function GoogleDriveCard({ onFiles }: { onFiles: (files: DriveFile[]) => 
               Connected
             </span>
             <span className="tabular-nums text-muted">{shownCount} files</span>
+          </div>
+        ) : status === "picking" && token ? (
+          <div className="flex items-center gap-1.5">
+            <select
+              value={folderId}
+              onChange={(e) => setFolderId(e.target.value)}
+              className="h-8 min-w-0 flex-1 rounded-md border border-line-strong bg-bg px-2 text-[12px]"
+              aria-label="Drive folder to read"
+            >
+              <option value="">All of My Drive</option>
+              {folders.map((f) => (
+                <option key={f.id} value={f.id}>
+                  {f.name}
+                </option>
+              ))}
+            </select>
+            <Button size="sm" onClick={() => importFrom(token, folderId || null)}>
+              Import
+            </Button>
           </div>
         ) : busy ? (
           <div className="h-8 flex items-center text-[12px] text-ink-2">{status === "connecting" ? "Signing in to Google" : "Reading your Drive"}</div>

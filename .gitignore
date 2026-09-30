@@ -44,3 +44,6 @@ next-env.d.ts
 .cache/
 pipeline/.work/
 .next-dev.log
+
+# local demo files to upload to Google Drive
+demo-inputs/
