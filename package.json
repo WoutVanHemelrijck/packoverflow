@@ -2,12 +2,29 @@
   "name": "spotless",
   "version": "0.1.0",
   "private": true,
+  "description": "Spotless: a janitor agent that settles conflicting facts across an organisation's documents by a constitution you control, and serves the settled facts to Claude and other agents over MCP.",
+  "keywords": [
+    "knowledge-management",
+    "mcp",
+    "model-context-protocol",
+    "agentic-ai",
+    "embeddings",
+    "payroll",
+    "sd-worx",
+    "nextjs"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WoutVanHemelrijck/packoverflow"
+  },
   "scripts": {
     "dev": "next dev -p 3100",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "mcp": "tsx mcp/server.ts"
+    "mcp": "tsx mcp/server.ts",
+    "check": "tsx scripts/check-engine.ts"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.0",

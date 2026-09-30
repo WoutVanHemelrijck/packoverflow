@@ -1,3 +1,4 @@
+// Janitor engine: corpus + ordered constitution in, settled ledger + per-rule trace + conflicts for a person out.
 import type {
   ClaimInstance,
   ClaimKey,

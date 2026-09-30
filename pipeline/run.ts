@@ -1,3 +1,4 @@
+// Offline pipeline: public/pdfs -> unpdf -> local multilingual embeddings -> UMAP + k-means -> Haiku claim re-extraction -> src/data/*.json.
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { extractText, getDocumentProxy } from "unpdf";

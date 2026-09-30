@@ -1,5 +1,5 @@
 // Ground-truth MCP server: Claude answers from settled facts instead of the raw documents.
-// Register: claude mcp add spotless -- npx tsx /Users/tristan/Projects/Hackathons/packoverflow/Tristan/mcp/server.ts
+// Register: claude mcp add spotless -- npx tsx /absolute/path/to/repo/mcp/server.ts
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
