@@ -140,7 +140,7 @@ export function FlowCanvas() {
 
   const STAGES = [
     { name: "Parse", value: <><Num value={done.length} />/{connected.length}</>, detail: `unpdf, ${pages} pages read` },
-    { name: "Embed", value: <><Num value={done.length} /> × 384</>, detail: "multilingual MiniLM, 384 dims" },
+    { name: "Embed", value: <><Num value={done.length} /> files</>, detail: "finds similar files, across Dutch, French and English" },
     { name: "Cluster", value: <><Num value={stats.topics} />/{k}</>, detail: `k-means over the embeddings, ${k} clusters, related files grouped together` },
     { name: "Extract", value: <><Num value={stats.facts} /> facts</>, detail: `Claude Haiku, ${report.claimsMatching ?? 48}/${report.claimsPlanted ?? 61} facts verified` },
     { name: "Rules", value: <><Num value={stats.byRules} /> settled</>, detail: `Constitution, ${articles} articles` },

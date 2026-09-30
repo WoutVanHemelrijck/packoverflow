@@ -121,7 +121,7 @@ export default function JanitorPage() {
           {tab === "queue" ? (
             <Card className="overflow-hidden">
               <Tally tally={tallyOf(doneSteps)} started={done > 0} />
-              <AgentLog steps={steps} done={done} result={result} articles={articles} />
+              <AgentLog steps={steps} done={done} result={result} articles={articles} onOpenConflict={setOpenClaim} />
             </Card>
           ) : (
             <Card className="overflow-hidden max-h-[440px] overflow-y-auto">

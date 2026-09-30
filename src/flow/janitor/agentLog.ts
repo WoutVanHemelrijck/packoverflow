@@ -21,20 +21,17 @@ const extracted = (claimsReal as { claims: { claimId: string; docId: string; val
 const norm = (v: number[]) => Math.sqrt(v.reduce((s, x) => s + x * x, 0));
 
 // Each doc's cluster from the real k-means run, plus its closest neighbour by cosine over the real 384-dim vectors.
-const nearest = new Map<string, { clusterId: string; label: string; related: number; closestId: string | null; closestSim: number }>();
+const nearest = new Map<string, { clusterId: string; label: string; related: number; closestId: string | null; closestSim: number; top: { id: string; sim: number }[] }>();
 const cosine = (a: number[], b: number[]) => a.reduce((s, x, i) => s + x * b[i], 0) / (norm(a) * norm(b));
 for (const c of clusters) {
   for (const d of c.docIds) {
     const v = vectors[d];
     if (!v) continue;
-    let closestId: string | null = null;
-    let closestSim = -1;
-    for (const other of c.docIds) {
-      if (other === d || !vectors[other]) continue;
-      const sim = cosine(v, vectors[other]);
-      if (sim > closestSim) [closestId, closestSim] = [other, sim];
-    }
-    nearest.set(d, { clusterId: c.id, label: c.label, related: c.docIds.length - 1, closestId, closestSim });
+    const top = c.docIds
+      .filter((other) => other !== d && vectors[other])
+      .map((other) => ({ id: other, sim: cosine(v, vectors[other]) }))
+      .sort((x, y) => y.sim - x.sim);
+    nearest.set(d, { clusterId: c.id, label: c.label, related: c.docIds.length - 1, closestId: top[0]?.id ?? null, closestSim: top[0]?.sim ?? 0, top: top.slice(0, 3) });
   }
 }
 
@@ -59,11 +56,11 @@ export function agentLog(docId: string, result: JanitorResult, articles: Article
 
   const nb = nearest.get(docId);
   if (nb) {
-    const closest = nb.closestId ? docById.get(nb.closestId) : undefined;
+    const similar = nb.top.map((t) => `${docById.get(t.id)?.title ?? t.id} (${Math.round(t.sim * 100)}%)`);
     out.push({
       kind: "embed",
-      text: `Embedded, found ${nb.related} related ${nb.related === 1 ? "file" : "files"}`,
-      detail: closest ? `multilingual MiniLM, 384 dims, closest: ${closest.title} (${nb.closestSim.toFixed(2)})` : "multilingual MiniLM, 384 dims",
+      text: `Found ${nb.related} similar ${nb.related === 1 ? "file" : "files"}`,
+      detail: similar.length ? `Closest: ${similar.join(", ")}` : undefined,
     });
   }
 

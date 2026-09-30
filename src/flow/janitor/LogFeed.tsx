@@ -1,106 +1,130 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Archive, ChevronRight, FileText, type LucideIcon, Orbit, Scale, Sparkles, Swords, UserRound } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { docById } from "@/lib/data";
 import { shortTitle } from "@/lib/janitor";
 import type { JanitorResult } from "@/lib/types";
-import { Badge, cn, ConnectorIcon, JanitorAvatar, type Tone } from "@/flow/ui";
-import { agentLog, type LogKind, type LogLine } from "./agentLog";
+import { Badge, ConnectorIcon, type Tone } from "@/flow/ui";
+import { agentLog } from "./agentLog";
 import type { Article, FileStep, OutcomeKind } from "./model";
+import { ReasoningDrawer } from "./ReasoningDrawer";
 
-const ICON: Record<LogKind, LucideIcon> = { read: FileText, embed: Orbit, extract: Sparkles, check: Swords, decide: Scale, human: UserRound, hygiene: Archive };
-const ICON_TONE: Record<LogKind, string> = { read: "text-muted", embed: "text-agent", extract: "text-agent", check: "text-conflict", decide: "text-settled", human: "text-conflict", hygiene: "text-warn" };
 const OUTCOME_TONE: Record<OutcomeKind, Tone> = { clean: "neutral", archived: "neutral", superseded: "warn", review: "warn", settled: "settled", jury: "agent", needs: "conflict" };
-const MAX_DONE = 7;
+const MAX_DONE = 5;
+const QUEUED = 2;
 
-function Line({ line }: { line: LogLine }) {
-  const Icon = ICON[line.kind];
-  return (
-    <motion.div initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.25 }} className="flex gap-2.5 items-start py-[3px]">
-      <Icon size={13} className={cn("flex-none mt-[3px]", ICON_TONE[line.kind])} />
-      <div className="min-w-0 flex-1">
-        <div className="text-[13px] leading-snug text-ink-2">{line.text}</div>
-        {line.detail && <div className="font-mono text-[11px] leading-snug text-muted truncate">{line.detail}</div>}
-      </div>
-    </motion.div>
-  );
-}
+// Mirrors loop.ts: the first 6 files of a run take 3000ms, the rest 1400ms. Module scope so it survives view switches.
+const run = { count: 0, last: "" };
 
-function Current({ step, result, articles }: { step: FileStep; result: JanitorResult; articles: Article[] }) {
+function Current({ step, result, articles, duration, onOpen }: { step: FileStep; result: JanitorResult; articles: Article[]; duration: number; onOpen: () => void }) {
   const lines = useMemo(() => agentLog(step.docId, result, articles), [step.docId, result, articles]);
-  const [shown, setShown] = useState(1);
+  const [i, setI] = useState(0);
   useEffect(() => {
-    if (shown >= lines.length) return;
-    const t = setTimeout(() => setShown((s) => s + 1), 320);
+    if (i >= lines.length - 1) return;
+    const t = setTimeout(() => setI((x) => x + 1), duration / lines.length);
     return () => clearTimeout(t);
-  }, [shown, lines.length]);
+  }, [i, lines.length, duration]);
   const doc = docById.get(step.docId);
   if (!doc) return null;
   return (
-    <div className="px-4 py-3 bg-agent-soft/50 border-b border-line">
-      <div className="flex items-center gap-3">
-        <ConnectorIcon id={doc.connector} size={20} />
-        <div className="flex-1 min-w-0 truncate text-[14px] font-medium">{shortTitle(doc.title, 60)}</div>
-        <span className="flex items-center gap-2 text-[13px] text-agent font-medium flex-none">
-          <motion.span animate={{ y: [0, -2, 0] }} transition={{ repeat: Infinity, duration: 0.6 }}>
-            <JanitorAvatar size={18} />
-          </motion.span>
-          Working
-        </span>
+    <button onClick={onOpen} className="relative w-full flex items-center gap-3 px-4 py-2.5 text-left bg-agent-soft/40 hover:bg-agent-soft/70 cursor-pointer border-b border-line">
+      <ConnectorIcon id={doc.connector} size={18} />
+      <div className="flex-1 min-w-0">
+        <div className="text-[13.5px] font-medium truncate">{shortTitle(doc.title, 60)}</div>
+        <motion.div key={i} initial={{ opacity: 0, y: 3 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="text-[12px] text-muted truncate">
+          {lines[i]?.text}
+        </motion.div>
       </div>
-      <div className="mt-2 pl-8">
-        {lines.slice(0, shown).map((l, i) => (
-          <Line key={i} line={l} />
-        ))}
-      </div>
+      <span className="flex items-center gap-1.5 text-[12.5px] text-agent font-medium flex-none">
+        <Loader2 size={13} className="animate-spin" /> Reading
+      </span>
+      <motion.span initial={{ width: "0%" }} animate={{ width: "100%" }} transition={{ duration: duration / 1000, ease: "linear" }} className="absolute left-0 bottom-0 h-[2px] bg-agent" />
+    </button>
+  );
+}
+
+function Row({ step, onOpen }: { step: FileStep; onOpen: () => void }) {
+  const doc = docById.get(step.docId);
+  if (!doc) return null;
+  return (
+    <button onClick={onOpen} className="w-full flex items-center gap-3 px-4 h-10 text-left hover:bg-canvas cursor-pointer border-b border-line">
+      <ConnectorIcon id={doc.connector} size={18} />
+      <div className="flex-1 min-w-0 truncate text-[13px] text-ink-2">{shortTitle(doc.title, 56)}</div>
+      <Badge tone={OUTCOME_TONE[step.kind]}>{step.label}</Badge>
+    </button>
+  );
+}
+
+function Queued({ step }: { step: FileStep }) {
+  const doc = docById.get(step.docId);
+  if (!doc) return null;
+  return (
+    <div className="w-full flex items-center gap-3 px-4 h-10 border-b border-line opacity-45">
+      <ConnectorIcon id={doc.connector} size={18} />
+      <div className="flex-1 min-w-0 truncate text-[13px] text-muted">{shortTitle(doc.title, 56)}</div>
+      <span className="text-[12px] text-faint">Queued</span>
     </div>
   );
 }
 
-function Done({ step, result, articles, open, onToggle }: { step: FileStep; result: JanitorResult; articles: Article[]; open: boolean; onToggle: () => void }) {
-  const doc = docById.get(step.docId);
-  if (!doc) return null;
-  return (
-    <div className="border-b border-line last:border-b-0">
-      <button onClick={onToggle} className="w-full flex items-center gap-3 px-4 h-10 text-left hover:bg-canvas cursor-pointer">
-        <ChevronRight size={13} className={cn("text-faint flex-none transition-transform", open && "rotate-90")} />
-        <ConnectorIcon id={doc.connector} size={18} />
-        <div className="flex-1 min-w-0 truncate text-[13px] text-ink-2">{shortTitle(doc.title, 56)}</div>
-        <Badge tone={OUTCOME_TONE[step.kind]}>{step.label}</Badge>
-      </button>
-      {open && (
-        <div className="pl-[60px] pr-4 pb-3">
-          {agentLog(step.docId, result, articles).map((l, i) => (
-            <Line key={i} line={l} />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-export function AgentLog({ steps, done, result, articles }: { steps: FileStep[]; done: number; result: JanitorResult; articles: Article[] }) {
+export function AgentLog({
+  steps,
+  done,
+  result,
+  articles,
+  onOpenConflict,
+}: {
+  steps: FileStep[];
+  done: number;
+  result: JanitorResult;
+  articles: Article[];
+  onOpenConflict: (claimId: string) => void;
+}) {
   const [open, setOpen] = useState<string | null>(null);
   const cur = steps[done];
+  if (!cur) run.count = 0;
+  else if (run.last !== cur.docId) {
+    run.last = cur.docId;
+    run.count++;
+  }
+  const duration = run.count <= 6 ? 3000 : 1400;
+  const queued = steps.slice(done + 1, done + 1 + QUEUED);
   const past = steps.slice(Math.max(0, done - MAX_DONE), done).reverse();
   const older = Math.max(0, done - MAX_DONE);
-  const waiting = steps.length - done - (cur ? 1 : 0);
+  const waiting = steps.length - done - (cur ? 1 : 0) - queued.length;
+  const openStep = steps.find((s) => s.docId === open) ?? null;
   return (
     <div>
-      {cur && <Current key={cur.docId} step={cur} result={result} articles={articles} />}
+      {queued
+        .slice()
+        .reverse()
+        .map((s) => (
+          <Queued key={s.docId} step={s} />
+        ))}
+      {cur && <Current key={cur.docId} step={cur} result={result} articles={articles} duration={duration} onOpen={() => setOpen(cur.docId)} />}
       {past.map((s) => (
-        <motion.div key={s.docId} initial={{ opacity: 0, y: -4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }}>
-          <Done step={s} result={result} articles={articles} open={open === s.docId} onToggle={() => setOpen(open === s.docId ? null : s.docId)} />
+        <motion.div key={s.docId} layout initial={{ opacity: 0, y: -4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }}>
+          <Row step={s} onOpen={() => setOpen(s.docId)} />
         </motion.div>
       ))}
       {(older > 0 || waiting > 0) && (
-        <div className="px-4 h-9 flex items-center gap-4 text-[12px] text-faint border-t border-line">
-          {waiting > 0 && <span>{waiting} files waiting</span>}
+        <div className="px-4 h-9 flex items-center gap-4 text-[12px] text-faint">
+          {waiting > 0 && <span>{waiting} more files waiting</span>}
           {older > 0 && <span>{older} earlier files cleaned</span>}
         </div>
       )}
+      <ReasoningDrawer
+        step={openStep}
+        result={result}
+        articles={articles}
+        onClose={() => setOpen(null)}
+        onOpenConflict={(id) => {
+          setOpen(null);
+          onOpenConflict(id);
+        }}
+      />
     </div>
   );
 }
