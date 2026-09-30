@@ -77,7 +77,7 @@ export function HealthStrip({ now, raw, series, total, showCertainty }: { now: H
   return (
     <Card className="px-5 py-2.5 flex items-center gap-7">
       <div className="flex-none w-[150px] flex items-baseline gap-2">
-        <div className="text-[15px] text-muted">Data health</div>
+        <div className="text-[15px] text-muted whitespace-nowrap">Data health</div>
         <div className={cn("stat text-[64px] transition-colors duration-500", tone)}>
           <AnimatedNumber value={now.score} />
         </div>
@@ -104,7 +104,7 @@ export function HealthStrip({ now, raw, series, total, showCertainty }: { now: H
       <div className="flex-none w-[150px] pl-6 border-l border-line">
         <div className="flex items-baseline gap-2">
           <span className="text-[13px] text-muted">Certainty</span>
-          <span className="stat text-[34px]">{showCertainty ? <><AnimatedNumber value={now.certainty} />%</> : <span className="text-faint">–</span>}</span>
+          <span className="stat text-[30px]">{showCertainty ? <><AnimatedNumber value={now.certainty} />%</> : <span className="text-faint">–</span>}</span>
         </div>
         <div className="text-[12px] text-muted">{showCertainty ? "rises as you confirm" : "after cleaning"}</div>
       </div>
