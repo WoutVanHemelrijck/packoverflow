@@ -84,11 +84,14 @@ export function AgentLog({
 }) {
   const [open, setOpen] = useState<string | null>(null);
   const cur = steps[done];
+  // Mirrors loop.ts's per-run file counter so the progress bar matches its 3s/1.4s pacing.
+  /* eslint-disable react-hooks/immutability, react-hooks/globals */
   if (!cur) run.count = 0;
   else if (run.last !== cur.docId) {
     run.last = cur.docId;
     run.count++;
   }
+  /* eslint-enable react-hooks/immutability, react-hooks/globals */
   const duration = run.count <= 6 ? 3000 : 1400;
   const queued = steps.slice(done + 1, done + 1 + QUEUED);
   const past = steps.slice(Math.max(0, done - MAX_DONE), done).reverse();
