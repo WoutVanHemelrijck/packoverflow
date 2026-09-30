@@ -1,0 +1,835 @@
+{
+ "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+ "generatedAt": "2026-09-30T18:35:35.386Z",
+ "points": [
+  {
+   "docId": "DOC-001",
+   "x": 454,
+   "y": 95,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-002",
+   "x": 360,
+   "y": 77,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-003",
+   "x": 354,
+   "y": 73,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-004",
+   "x": 479,
+   "y": 70,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-005",
+   "x": 489,
+   "y": 112,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-006",
+   "x": 388,
+   "y": 83,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-007",
+   "x": 333,
+   "y": 103,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-008",
+   "x": 438,
+   "y": 112,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-009",
+   "x": 418,
+   "y": 90,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-010",
+   "x": 431,
+   "y": 80,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-011",
+   "x": 396,
+   "y": 125,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-012",
+   "x": 746,
+   "y": 753,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-013",
+   "x": 755,
+   "y": 789,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-014",
+   "x": 757,
+   "y": 742,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-015",
+   "x": 789,
+   "y": 784,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-016",
+   "x": 729,
+   "y": 784,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-017",
+   "x": 682,
+   "y": 770,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-018",
+   "x": 767,
+   "y": 759,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-019",
+   "x": 692,
+   "y": 779,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-020",
+   "x": 695,
+   "y": 753,
+   "clusterId": "C-02"
+  },
+  {
+   "docId": "DOC-021",
+   "x": 745,
+   "y": 674,
+   "clusterId": "C-03"
+  },
+  {
+   "docId": "DOC-022",
+   "x": 808,
+   "y": 659,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-023",
+   "x": 740,
+   "y": 645,
+   "clusterId": "C-03"
+  },
+  {
+   "docId": "DOC-024",
+   "x": 683,
+   "y": 673,
+   "clusterId": "C-03"
+  },
+  {
+   "docId": "DOC-025",
+   "x": 779,
+   "y": 630,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-026",
+   "x": 731,
+   "y": 686,
+   "clusterId": "C-03"
+  },
+  {
+   "docId": "DOC-027",
+   "x": 694,
+   "y": 635,
+   "clusterId": "C-03"
+  },
+  {
+   "docId": "DOC-028",
+   "x": 718,
+   "y": 651,
+   "clusterId": "C-03"
+  },
+  {
+   "docId": "DOC-029",
+   "x": 566,
+   "y": 292,
+   "clusterId": "C-04"
+  },
+  {
+   "docId": "DOC-030",
+   "x": 585,
+   "y": 297,
+   "clusterId": "C-04"
+  },
+  {
+   "docId": "DOC-031",
+   "x": 557,
+   "y": 323,
+   "clusterId": "C-04"
+  },
+  {
+   "docId": "DOC-032",
+   "x": 612,
+   "y": 308,
+   "clusterId": "C-04"
+  },
+  {
+   "docId": "DOC-033",
+   "x": 651,
+   "y": 326,
+   "clusterId": "C-04"
+  },
+  {
+   "docId": "DOC-034",
+   "x": 645,
+   "y": 285,
+   "clusterId": "C-04"
+  },
+  {
+   "docId": "DOC-035",
+   "x": 636,
+   "y": 302,
+   "clusterId": "C-04"
+  },
+  {
+   "docId": "DOC-036",
+   "x": 180,
+   "y": 585,
+   "clusterId": "C-05"
+  },
+  {
+   "docId": "DOC-037",
+   "x": 181,
+   "y": 608,
+   "clusterId": "C-05"
+  },
+  {
+   "docId": "DOC-038",
+   "x": 97,
+   "y": 697,
+   "clusterId": "C-13"
+  },
+  {
+   "docId": "DOC-039",
+   "x": 146,
+   "y": 729,
+   "clusterId": "C-13"
+  },
+  {
+   "docId": "DOC-040",
+   "x": 481,
+   "y": 574,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-041",
+   "x": 105,
+   "y": 691,
+   "clusterId": "C-13"
+  },
+  {
+   "docId": "DOC-042",
+   "x": 178,
+   "y": 597,
+   "clusterId": "C-05"
+  },
+  {
+   "docId": "DOC-043",
+   "x": 159,
+   "y": 681,
+   "clusterId": "C-05"
+  },
+  {
+   "docId": "DOC-044",
+   "x": 138,
+   "y": 717,
+   "clusterId": "C-13"
+  },
+  {
+   "docId": "DOC-045",
+   "x": 359,
+   "y": 713,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-046",
+   "x": 316,
+   "y": 740,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-047",
+   "x": 319,
+   "y": 703,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-048",
+   "x": 337,
+   "y": 749,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-049",
+   "x": 372,
+   "y": 683,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-050",
+   "x": 391,
+   "y": 714,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-051",
+   "x": 342,
+   "y": 719,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-052",
+   "x": 378,
+   "y": 728,
+   "clusterId": "C-06"
+  },
+  {
+   "docId": "DOC-053",
+   "x": 460,
+   "y": 317,
+   "clusterId": "C-14"
+  },
+  {
+   "docId": "DOC-054",
+   "x": 437,
+   "y": 330,
+   "clusterId": "C-14"
+  },
+  {
+   "docId": "DOC-055",
+   "x": 493,
+   "y": 383,
+   "clusterId": "C-07"
+  },
+  {
+   "docId": "DOC-056",
+   "x": 433,
+   "y": 393,
+   "clusterId": "C-07"
+  },
+  {
+   "docId": "DOC-057",
+   "x": 421,
+   "y": 336,
+   "clusterId": "C-14"
+  },
+  {
+   "docId": "DOC-058",
+   "x": 465,
+   "y": 134,
+   "clusterId": "C-14"
+  },
+  {
+   "docId": "DOC-059",
+   "x": 422,
+   "y": 377,
+   "clusterId": "C-07"
+  },
+  {
+   "docId": "DOC-060",
+   "x": 410,
+   "y": 356,
+   "clusterId": "C-07"
+  },
+  {
+   "docId": "DOC-061",
+   "x": 453,
+   "y": 354,
+   "clusterId": "C-07"
+  },
+  {
+   "docId": "DOC-062",
+   "x": 891,
+   "y": 496,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-063",
+   "x": 862,
+   "y": 469,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-064",
+   "x": 852,
+   "y": 514,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-065",
+   "x": 823,
+   "y": 494,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-066",
+   "x": 930,
+   "y": 500,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-067",
+   "x": 881,
+   "y": 466,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-068",
+   "x": 892,
+   "y": 512,
+   "clusterId": "C-08"
+  },
+  {
+   "docId": "DOC-069",
+   "x": 109,
+   "y": 928,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-070",
+   "x": 140,
+   "y": 910,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-071",
+   "x": 128,
+   "y": 888,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-072",
+   "x": 85,
+   "y": 907,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-073",
+   "x": 90,
+   "y": 930,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-074",
+   "x": 118,
+   "y": 920,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-075",
+   "x": 70,
+   "y": 890,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-076",
+   "x": 153,
+   "y": 920,
+   "clusterId": "C-09"
+  },
+  {
+   "docId": "DOC-077",
+   "x": 479,
+   "y": 537,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-078",
+   "x": 610,
+   "y": 487,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-079",
+   "x": 444,
+   "y": 580,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-080",
+   "x": 441,
+   "y": 505,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-081",
+   "x": 402,
+   "y": 561,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-082",
+   "x": 470,
+   "y": 507,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-083",
+   "x": 403,
+   "y": 514,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-084",
+   "x": 410,
+   "y": 503,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-085",
+   "x": 470,
+   "y": 543,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-086",
+   "x": 342,
+   "y": 113,
+   "clusterId": "C-01"
+  },
+  {
+   "docId": "DOC-087",
+   "x": 243,
+   "y": 566,
+   "clusterId": "C-11"
+  },
+  {
+   "docId": "DOC-088",
+   "x": 242,
+   "y": 605,
+   "clusterId": "C-11"
+  },
+  {
+   "docId": "DOC-089",
+   "x": 235,
+   "y": 584,
+   "clusterId": "C-11"
+  },
+  {
+   "docId": "DOC-090",
+   "x": 288,
+   "y": 538,
+   "clusterId": "C-10"
+  },
+  {
+   "docId": "DOC-091",
+   "x": 267,
+   "y": 582,
+   "clusterId": "C-11"
+  },
+  {
+   "docId": "DOC-092",
+   "x": 247,
+   "y": 622,
+   "clusterId": "C-11"
+  },
+  {
+   "docId": "DOC-093",
+   "x": 311,
+   "y": 602,
+   "clusterId": "C-11"
+  },
+  {
+   "docId": "DOC-094",
+   "x": 793,
+   "y": 403,
+   "clusterId": "C-12"
+  },
+  {
+   "docId": "DOC-095",
+   "x": 741,
+   "y": 389,
+   "clusterId": "C-12"
+  },
+  {
+   "docId": "DOC-096",
+   "x": 728,
+   "y": 416,
+   "clusterId": "C-12"
+  },
+  {
+   "docId": "DOC-097",
+   "x": 755,
+   "y": 411,
+   "clusterId": "C-12"
+  },
+  {
+   "docId": "DOC-098",
+   "x": 798,
+   "y": 430,
+   "clusterId": "C-12"
+  },
+  {
+   "docId": "DOC-099",
+   "x": 742,
+   "y": 396,
+   "clusterId": "C-12"
+  },
+  {
+   "docId": "DOC-100",
+   "x": 748,
+   "y": 418,
+   "clusterId": "C-12"
+  }
+ ],
+ "clusters": [
+  {
+   "id": "C-01",
+   "topicId": "indexation-cap",
+   "label": "Belgian indexation cap 2026",
+   "summary": "This cluster documents SD Worx's implementation of Belgium's 2026 wage indexation cap, which limits automatic indexation to the first EUR 4,000 of gross monthly pay across all joint committees, effective from 1 June 2026 (or 1 January for some initial guidance).",
+   "color": "#6cc5ff",
+   "docIds": [
+    "DOC-001",
+    "DOC-002",
+    "DOC-003",
+    "DOC-004",
+    "DOC-005",
+    "DOC-006",
+    "DOC-007",
+    "DOC-008",
+    "DOC-009",
+    "DOC-010",
+    "DOC-011",
+    "DOC-025",
+    "DOC-086"
+   ]
+  },
+  {
+   "id": "C-02",
+   "topicId": "meal-vouchers",
+   "label": "Meal vouchers policy 2026",
+   "summary": "Belgian meal voucher policies and procedures for 2026, including maximum face values, employee and employer contributions, and eligibility rules for different work arrangements.",
+   "color": "#7cefc0",
+   "docIds": [
+    "DOC-012",
+    "DOC-013",
+    "DOC-014",
+    "DOC-015",
+    "DOC-016",
+    "DOC-017",
+    "DOC-018",
+    "DOC-019",
+    "DOC-020"
+   ]
+  },
+  {
+   "id": "C-03",
+   "topicId": "home-working-allowance",
+   "label": "Home working allowance Belgium",
+   "summary": "Belgian payroll procedures and policies for tax-free home working allowances, with maximum amounts indexed annually and eligibility requirements.",
+   "color": "#f3c14e",
+   "docIds": [
+    "DOC-021",
+    "DOC-023",
+    "DOC-024",
+    "DOC-026",
+    "DOC-027",
+    "DOC-028"
+   ]
+  },
+  {
+   "id": "C-04",
+   "topicId": "eco-cheques",
+   "label": "Eco-cheques policy PC 200",
+   "summary": "Belgian eco-cheques policy for PC 200 employees, with a maximum of €250 per year for full-time employees, pro-rata amounts for part-time workers, and payment by 15 December.",
+   "color": "#e183f5",
+   "docIds": [
+    "DOC-029",
+    "DOC-030",
+    "DOC-031",
+    "DOC-032",
+    "DOC-033",
+    "DOC-034",
+    "DOC-035"
+   ]
+  },
+  {
+   "id": "C-05",
+   "topicId": "reintegration",
+   "label": "Reintegration plan deadlines",
+   "summary": "Belgian reintegration policies establishing the timeline for employers to submit reintegration plans following work incapacity assessments, with the 2026 reform reducing the deadline from 10 weeks to 8 weeks.",
+   "color": "#ffab73",
+   "docIds": [
+    "DOC-036",
+    "DOC-037",
+    "DOC-042",
+    "DOC-043"
+   ]
+  },
+  {
+   "id": "C-06",
+   "topicId": "voluntary-overtime",
+   "label": "Voluntary overtime 2026 Belgium",
+   "summary": "Belgian regulatory framework for voluntary overtime in 2026, specifying annual hour limits, written agreement requirements, and tax treatment of overtime compensation.",
+   "color": "#95a0ff",
+   "docIds": [
+    "DOC-045",
+    "DOC-046",
+    "DOC-047",
+    "DOC-048",
+    "DOC-049",
+    "DOC-050",
+    "DOC-051",
+    "DOC-052"
+   ]
+  },
+  {
+   "id": "C-07",
+   "topicId": "year-end-bonus-pc200",
+   "label": "Year-end bonus PC 200",
+   "summary": "Documents describing the Belgian PC 200 year-end bonus eligibility requirements, calculation method, and payment timing.",
+   "color": "#4fd39a",
+   "docIds": [
+    "DOC-055",
+    "DOC-056",
+    "DOC-059",
+    "DOC-060",
+    "DOC-061"
+   ]
+  },
+  {
+   "id": "C-08",
+   "topicId": "km-allowance",
+   "label": "Kilometre allowance Belgium",
+   "summary": "Flat-rate kilometre reimbursement for business travel with private vehicles in Belgium, with annual tax-free limits.",
+   "color": "#ff8fa3",
+   "docIds": [
+    "DOC-022",
+    "DOC-062",
+    "DOC-063",
+    "DOC-064",
+    "DOC-065",
+    "DOC-066",
+    "DOC-067",
+    "DOC-068"
+   ]
+  },
+  {
+   "id": "C-09",
+   "topicId": "flexi-jobs",
+   "label": "Flexi-jobs 2026 regulations",
+   "summary": "Belgian flexi-jobs framework for 2026 including minimum hourly wages, employer contributions, and eligible sectors.",
+   "color": "#c8f23d",
+   "docIds": [
+    "DOC-069",
+    "DOC-070",
+    "DOC-071",
+    "DOC-072",
+    "DOC-073",
+    "DOC-074",
+    "DOC-075",
+    "DOC-076"
+   ]
+  },
+  {
+   "id": "C-10",
+   "topicId": "payroll-cutoff",
+   "label": "Payroll close dates",
+   "summary": "This cluster contains payroll close date calendars and procedures for three Belgian clients: Transport Verhaeghe NV, Clinique Saint-Luc ASBL, and Bakkerij Janssens BV, specifying the monthly deadlines for submitting employee performance data.",
+   "color": "#8fe9ff",
+   "docIds": [
+    "DOC-040",
+    "DOC-077",
+    "DOC-078",
+    "DOC-079",
+    "DOC-080",
+    "DOC-081",
+    "DOC-082",
+    "DOC-083",
+    "DOC-084",
+    "DOC-085",
+    "DOC-090"
+   ]
+  },
+  {
+   "id": "C-11",
+   "topicId": "notice-period",
+   "label": "Notice periods Belgium",
+   "summary": "Documents defining notice periods for employer dismissals and employee resignations under Belgian unified statute law.",
+   "color": "#ffd60a",
+   "docIds": [
+    "DOC-087",
+    "DOC-088",
+    "DOC-089",
+    "DOC-091",
+    "DOC-092",
+    "DOC-093"
+   ]
+  },
+  {
+   "id": "C-12",
+   "topicId": "company-car-solidarity",
+   "label": "Company cars",
+   "summary": "Belgian payroll procedures and policies for 2026 company car CO2 solidarity contributions and tax deductibility rates.",
+   "color": "#b28dff",
+   "docIds": [
+    "DOC-094",
+    "DOC-095",
+    "DOC-096",
+    "DOC-097",
+    "DOC-098",
+    "DOC-099",
+    "DOC-100"
+   ]
+  },
+  {
+   "id": "C-13",
+   "topicId": "extra-1",
+   "label": "Employer sickness benefit contribution",
+   "summary": "Belgian employers must contribute a percentage of sickness benefits during months 2 and 3 of employee incapacity, with exemptions for companies with fewer than 50 employees.",
+   "color": "#ff6b6b",
+   "docIds": [
+    "DOC-038",
+    "DOC-039",
+    "DOC-041",
+    "DOC-044"
+   ]
+  },
+  {
+   "id": "C-14",
+   "topicId": "extra-2",
+   "label": "Year-end bonus PC 200 (split)",
+   "summary": "Procedures and policy for calculating year-end bonuses for employees in Belgian professional committee 200, requiring minimum seniority and paid pro rata based on worked months.",
+   "color": "#5eead4",
+   "docIds": [
+    "DOC-053",
+    "DOC-054",
+    "DOC-057",
+    "DOC-058"
+   ]
+  }
+ ],
+ "purity": 0.87
+}

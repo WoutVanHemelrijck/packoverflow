@@ -1,0 +1,16 @@
+{
+ "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+ "llmModel": "claude-haiku-4-5-20251001",
+ "docsParsed": 100,
+ "pagesParsed": 150,
+ "chars": 92677,
+ "embedMs": 13322,
+ "umapMs": 277,
+ "k": 14,
+ "purity": 0.87,
+ "llmCalls": 14,
+ "claimsPlanted": 61,
+ "claimsFoundByLlm": 88,
+ "claimsMatching": 48,
+ "generatedAt": "2026-09-30T18:35:35.393Z"
+}

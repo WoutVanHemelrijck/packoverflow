@@ -1,0 +1,1024 @@
+{
+ "model": "claude-haiku-4-5-20251001",
+ "generatedAt": "2026-09-30T18:35:35.392Z",
+ "stats": {
+  "clustersCovered": 14,
+  "clustersFailed": [],
+  "docsCovered": 100,
+  "planted": 61,
+  "plantedInCoveredDocs": 61,
+  "found": 88,
+  "matching": 48,
+  "recall": 0.787,
+  "extraConsistent": 37,
+  "extraNovel": 3,
+  "quotesFoundVerbatimInPdf": 87
+ },
+ "claims": [
+  {
+   "claimId": "home_working.max_allowance",
+   "docId": "DOC-021",
+   "value": "€157.83",
+   "quote": "De maximale forfaitaire thuiswerkvergoeding bedraagt EUR 157,83 per maand vanaf 1 april 2026.",
+   "appliesTo": "Belgium",
+   "clusterId": "C-03",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "home_working.max_allowance",
+   "docId": "DOC-026",
+   "value": "€157.83",
+   "quote": "De maximale forfaitaire thuiswerkvergoeding bedraagt EUR 157,83 per maand vanaf 1 april 2026.",
+   "appliesTo": "Belgium",
+   "clusterId": "C-03",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "reintegration.plan_deadline",
+   "docId": "DOC-036",
+   "value": "10 weeks",
+   "quote": "De werkgever bezorgt een re-integratieplan binnen 10 weken nadat de preventieadviseur-arbeidsarts de re-integratiebeoordeling heeft afgerond.",
+   "clusterId": "C-05",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "reintegration.plan_deadline",
+   "docId": "DOC-037",
+   "value": "8 weeks",
+   "quote": "L'employeur remet un plan de réintégration dans les 8 semaines après l'évaluation de réintégration par le conseiller en prévention-médecin du travail.",
+   "clusterId": "C-05",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "reintegration.plan_deadline",
+   "docId": "DOC-042",
+   "value": "8 weeks",
+   "quote": "The 2026 version applies, 8 weeks.",
+   "clusterId": "C-05",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "reintegration.plan_deadline",
+   "docId": "DOC-043",
+   "value": "8 weeks",
+   "quote": "Plan de réintégration : 8 semaines après l'évaluation.",
+   "clusterId": "C-05",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "eco_cheques.max_amount",
+   "docId": "DOC-029",
+   "value": "€250.00",
+   "quote": "Een voltijdse bediende met een volledige referteperiode ontvangt ecocheques voor een bedrag van EUR 250,00 per jaar.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "eco_cheques.max_amount",
+   "docId": "DOC-030",
+   "value": "€250.00",
+   "quote": "Een voltijdse bediende met een volledige referteperiode krijgt het maximum van EUR 250,00.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "eco_cheques.max_amount",
+   "docId": "DOC-031",
+   "value": "€250.00",
+   "quote": "Non, dans la CP 200 le travailleur à temps partiel reçoit le montant complet de EUR 250,00, comme un temps plein.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "eco_cheques.max_amount",
+   "docId": "DOC-032",
+   "value": "€250.00",
+   "quote": "Het totale bedrag van de ecocheques mag per werknemer en per kalenderjaar niet hoger liggen dan EUR 250,00.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "eco_cheques.max_amount",
+   "docId": "DOC-033",
+   "value": "€250.00",
+   "quote": "EUR 250,00 par travailleur temps plein",
+   "appliesTo": "CP 330",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "eco_cheques.max_amount",
+   "docId": "DOC-035",
+   "value": "€250.00",
+   "quote": "Example: 14 employees x EUR 250.00 = EUR 3,500.00 ordered from the issuer.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "eco_cheques.part_time",
+   "docId": "DOC-030",
+   "value": "pro rata of actual working hours",
+   "quote": "Een deeltijdse werknemer ontvangt ecocheques pro rata van zijn arbeidsduur.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "eco_cheques.part_time",
+   "docId": "DOC-031",
+   "value": "€250.00",
+   "quote": "Non, dans la CP 200 le travailleur à temps partiel reçoit le montant complet de EUR 250,00, comme un temps plein.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-04",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "notice_period.five_years",
+   "docId": "DOC-087",
+   "value": "15 weeks",
+   "quote": "Bij een anciënniteit van 5 jaar bedraagt de opzeggingstermijn 15 weken.",
+   "clusterId": "C-11",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "notice_period.five_years",
+   "docId": "DOC-088",
+   "value": "18 weeks",
+   "quote": "Licenciement par l'employeur : 5 ans d'ancienneté = 18 semaines de préavis.",
+   "clusterId": "C-11",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "notice_period.employee_max",
+   "docId": "DOC-087",
+   "value": "13 weeks",
+   "quote": "De opzeggingstermijn bij ontslag door de werknemer bedraagt maximaal 13 weken.",
+   "clusterId": "C-11",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "notice_period.employee_max",
+   "docId": "DOC-088",
+   "value": "13 weeks",
+   "quote": "Démission par le travailleur : maximum 13 semaines.",
+   "clusterId": "C-11",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "notice_period.employee_max",
+   "docId": "DOC-089",
+   "value": "13 weeks",
+   "quote": "Dat hangt af van de anciënniteit, met een maximum van 13 weken.",
+   "clusterId": "C-11",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "km_allowance.rate",
+   "docId": "DOC-062",
+   "value": "€0.4415/km",
+   "quote": "De forfaitaire kilometervergoeding bedraagt EUR 0,4415 per kilometer.",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "km_allowance.max_km",
+   "docId": "DOC-062",
+   "value": "24,000 km",
+   "quote": "Het fiscale maximum is 24.000 kilometer per jaar.",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "km_allowance.rate",
+   "docId": "DOC-063",
+   "value": "€0.4280/km",
+   "quote": "L'indemnité kilométrique forfaitaire est de EUR 0,4280 par kilomètre",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "km_allowance.max_km",
+   "docId": "DOC-063",
+   "value": "24,000 km",
+   "quote": "avec un maximum de 24.000 kilomètres par an.",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "km_allowance.rate",
+   "docId": "DOC-064",
+   "value": "€0.4280/km",
+   "quote": "800 business kilometres at the flat rate of July 2026: 800 x EUR 0.4280",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "km_allowance.rate",
+   "docId": "DOC-065",
+   "value": "€0.4415/km",
+   "quote": "950 x EUR 0,4415 = EUR 419,43",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "km_allowance.rate",
+   "docId": "DOC-065",
+   "value": "€0.4280/km",
+   "quote": "In juli zou dat 950 x EUR 0,4280 = EUR 406,60 zijn.",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "km_allowance.rate",
+   "docId": "DOC-067",
+   "value": "€0.4280/km",
+   "quote": "L'indemnité kilométrique forfaitaire est de EUR 0,4280 par kilomètre",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "km_allowance.max_km",
+   "docId": "DOC-067",
+   "value": "24,000 km",
+   "quote": "avec un maximum de 24.000 kilomètres par an.",
+   "clusterId": "C-08",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "voluntary_overtime.annual_hours",
+   "docId": "DOC-045",
+   "value": "360 hours",
+   "quote": "Een werknemer mag per kalenderjaar maximaal 360 vrijwillige overuren presteren.",
+   "clusterId": "C-06",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "voluntary_overtime.annual_hours",
+   "docId": "DOC-045",
+   "value": "450 hours",
+   "quote": "In de horeca geldt een hoger contingent van 450 uren.",
+   "appliesTo": "horeca",
+   "clusterId": "C-06",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "voluntary_overtime.agreement_duration",
+   "docId": "DOC-045",
+   "value": "6 months",
+   "quote": "De werknemer sluit vooraf een schriftelijk akkoord met de werkgever dat geldig is voor 6 maanden en hernieuwbaar is.",
+   "clusterId": "C-06",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "voluntary_overtime.annual_hours",
+   "docId": "DOC-047",
+   "value": "360 hours",
+   "quote": "Le travailleur peut prester jusqu'à 360 heures supplémentaires volontaires par année civile.",
+   "clusterId": "C-06",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "voluntary_overtime.agreement_duration",
+   "docId": "DOC-047",
+   "value": "6 months",
+   "quote": "Oui, un accord écrit conclu à l'avance, valable 6 mois et renouvelable.",
+   "clusterId": "C-06",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "voluntary_overtime.annual_hours",
+   "docId": "DOC-048",
+   "value": "360 hours",
+   "quote": "The engine exempts the first 240 hours per year from social security and withholding tax. Hours above 240 up to the yearly limit",
+   "clusterId": "C-06",
+   "quoteInPdf": false,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-001",
+   "value": "€4,000",
+   "quote": "De indexering wordt alleen toegepast op het deel van het bruto maandloon tot EUR 4.000.",
+   "appliesTo": "All private sector employees",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-002",
+   "value": "€4,000",
+   "quote": "automatic wage indexation applies in full to the part of gross monthly pay up to EUR 4,000 and does not apply to the part of gross monthly pay above EUR 4,000.",
+   "appliesTo": "All Belgian private-sector employers",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-005",
+   "value": "€4,000",
+   "quote": "Controleer in de loonmotor of de parameter INDEX_CAP_BE op EUR 4.000 staat.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-006",
+   "value": "€4,000",
+   "quote": "Le plafond est en vigueur depuis le 1er juin 2026.",
+   "appliesTo": "CP 200",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-007",
+   "value": "€4,000",
+   "quote": "Indexation applies to gross monthly pay up to EUR 4,000.",
+   "appliesTo": "All clients",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-008",
+   "value": "€4,000",
+   "quote": "En de parameter staat op EUR 4.000?",
+   "appliesTo": "All joint committees",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-009",
+   "value": "€4,000",
+   "quote": "L'indexation s'applique au salaire brut mensuel jusqu'à EUR 4.000.",
+   "appliesTo": "All",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-010",
+   "value": "€4,000",
+   "quote": "De indexering wordt alleen toegepast op het deel van het bruto maandloon tot EUR 4.000.",
+   "appliesTo": "All private sector employees",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-001",
+   "value": "1 January 2026",
+   "quote": "Het indexeringsplafond geldt vanaf 1 januari 2026 voor alle werknemers in de privésector.",
+   "appliesTo": "All private sector employees",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-002",
+   "value": "1 June 2026",
+   "quote": "The indexation cap applies from 1 June 2026.",
+   "appliesTo": "All Belgian private-sector employers",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-005",
+   "value": "1 June 2026",
+   "quote": "Het plafond wordt voor PC 200 voor het eerst toegepast bij de indexering van juni 2026, samen met de inwerkingtreding van het plafond op 1 juni 2026.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-006",
+   "value": "1 June 2026",
+   "quote": "Le plafond est en vigueur depuis le 1er juin 2026.",
+   "appliesTo": "CP 200",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-007",
+   "value": "1 June 2026",
+   "quote": "The cap is in force from 1 June 2026.",
+   "appliesTo": "All",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-008",
+   "value": "1 June 2026",
+   "quote": "Het plafond is wel van kracht sinds 1 juni.",
+   "appliesTo": "All",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-010",
+   "value": "1 January 2026",
+   "quote": "Het indexeringsplafond geldt vanaf 1 januari 2026 voor alle werknemers in de privésector.",
+   "appliesTo": "All private sector employees",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "indexation_cap.first_application_pc200",
+   "docId": "DOC-005",
+   "value": "June 2026",
+   "quote": "Het plafond wordt voor PC 200 voor het eerst toegepast bij de indexering van juni 2026, samen met de inwerkingtreding van het plafond op 1 juni 2026.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "indexation_cap.first_application_pc200",
+   "docId": "DOC-006",
+   "value": "January 2027",
+   "quote": "Pour la CP 200, il s'applique pour la première fois à l'indexation de janvier 2027, parce que la CP 200 indexe les salaires une fois par an, en janvier.",
+   "appliesTo": "CP 200",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "indexation_cap.first_application_pc200",
+   "docId": "DOC-011",
+   "value": "January 2027",
+   "quote": "Na de indexering van januari 2027 (2,20%) wordt het EUR 4.888,00",
+   "appliesTo": "PC 200",
+   "clusterId": "C-01",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "reintegration.employer_contribution",
+   "docId": "DOC-038",
+   "value": "30%",
+   "quote": "De werkgever betaalt een bijdrage van 30% van de ziekte-uitkering tijdens de tweede en derde maand van arbeidsongeschiktheid.",
+   "clusterId": "C-13",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "reintegration.employer_contribution",
+   "docId": "DOC-039",
+   "value": "25%",
+   "quote": "L'employeur verse une cotisation de 25% de l'indemnité de maladie pendant les deuxième et troisième mois d'incapacité.",
+   "clusterId": "C-13",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "reintegration.employer_contribution",
+   "docId": "DOC-041",
+   "value": "30%",
+   "quote": "ziekte-uitkering EUR 2.100,00 per maand, 30% bijdrage",
+   "appliesTo": "PC 124",
+   "clusterId": "C-13",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "reintegration.employer_contribution",
+   "docId": "DOC-044",
+   "value": "30%",
+   "quote": "De werkgever betaalt een bijdrage van 30% van de ziekte-uitkering tijdens de tweede en derde maand van arbeidsongeschiktheid.",
+   "clusterId": "C-13",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "year_end_bonus.min_seniority",
+   "docId": "DOC-060",
+   "value": "6 months",
+   "quote": "De bediende heeft recht op een eindejaarspremie als hij minstens 6 maanden anciënniteit heeft in de onderneming op het moment van betaling.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-07",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "year_end_bonus.payment_month",
+   "docId": "DOC-055",
+   "value": "December pay",
+   "quote": "De eindejaarspremie wordt uitbetaald samen met het loon van december.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-07",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "year_end_bonus.payment_month",
+   "docId": "DOC-061",
+   "value": "December pay",
+   "quote": "Paid with the December pay.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-07",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "company_car.min_solidarity",
+   "docId": "DOC-094",
+   "value": "€33.62/month",
+   "quote": "De minimale solidariteitsbijdrage bedraagt EUR 33,62 per maand per wagen in 2026",
+   "clusterId": "C-12",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "company_car.min_solidarity",
+   "docId": "DOC-095",
+   "value": "€32.95/month",
+   "quote": "La cotisation minimale est de EUR 32,95 par mois et par véhicule",
+   "clusterId": "C-12",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "company_car.hybrid_deduction",
+   "docId": "DOC-096",
+   "value": "50%",
+   "quote": "A plug-in hybrid ordered between 1 July 2023 and 31 December 2025 is 50% deductible in 2026",
+   "clusterId": "C-12",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "company_car.hybrid_deduction",
+   "docId": "DOC-097",
+   "value": "75%",
+   "quote": "Voor een plug-inhybride besteld vóór 1 januari 2026 geldt in 2026 een aftrek van 75% voor de kosten",
+   "clusterId": "C-12",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "year_end_bonus.min_seniority",
+   "docId": "DOC-053",
+   "value": "6 months",
+   "quote": "De bediende heeft recht op een eindejaarspremie als hij minstens 6 maanden anciënniteit heeft in de onderneming op het moment van betaling.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-14",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "year_end_bonus.min_seniority",
+   "docId": "DOC-054",
+   "value": "1 year",
+   "quote": "L'employé doit compter au moins 1 an d'ancienneté dans l'entreprise pour avoir droit à la prime.",
+   "appliesTo": "CP 200",
+   "clusterId": "C-14",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "year_end_bonus.payment_month",
+   "docId": "DOC-053",
+   "value": "December pay",
+   "quote": "De premie is gelijk aan het volle bruto maandloon van december, pro rata van de gewerkte en gelijkgestelde maanden in het jaar.",
+   "appliesTo": "PC 200",
+   "clusterId": "C-14",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "flexi_jobs.employer_contribution",
+   "docId": "DOC-069",
+   "value": "28%",
+   "quote": "L'employeur paie une cotisation spéciale de 28% sur le flexi-salaire.",
+   "clusterId": "C-09",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "flexi_jobs.min_hourly_wage",
+   "docId": "DOC-069",
+   "value": "€12.29/hour",
+   "quote": "Le flexi-salaire minimum est de EUR 12,29 de l'heure, pécule de vacances compris.",
+   "clusterId": "C-09",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "flexi_jobs.employer_contribution",
+   "docId": "DOC-070",
+   "value": "25%",
+   "quote": "La cotisation patronale est de 25%",
+   "appliesTo": "Brasserie du Parc SRL (CP 302)",
+   "clusterId": "C-09",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "flexi_jobs.employer_contribution",
+   "docId": "DOC-076",
+   "value": "28%",
+   "quote": "L'employeur paie une cotisation spéciale de 28% sur le flexi-salaire.",
+   "clusterId": "C-09",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "flexi_jobs.min_hourly_wage",
+   "docId": "DOC-076",
+   "value": "€12.29/hour",
+   "quote": "Le flexi-salaire minimum est de EUR 12,29 de l'heure, pécule de vacances compris.",
+   "clusterId": "C-09",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "payroll_cutoff.transport_verhaeghe",
+   "docId": "DOC-077",
+   "value": "20th of the month",
+   "quote": "De prestaties van Transport Verhaeghe NV moeten elke maand uiterlijk op de 20e bij Payroll Ops BE zijn.",
+   "appliesTo": "Transport Verhaeghe NV",
+   "clusterId": "C-10",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "payroll_cutoff.transport_verhaeghe",
+   "docId": "DOC-078",
+   "value": "22nd of the month",
+   "quote": "Voor Transport Verhaeghe NV sluit Payroll Ops BE de prestaties af op de 22e van de maand",
+   "appliesTo": "Transport Verhaeghe NV",
+   "clusterId": "C-10",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "payroll_cutoff.transport_verhaeghe",
+   "docId": "DOC-085",
+   "value": "20th of the month",
+   "quote": "De prestaties van Transport Verhaeghe NV moeten elke maand uiterlijk op de 20e bij Payroll Ops BE zijn.",
+   "appliesTo": "Transport Verhaeghe NV",
+   "clusterId": "C-10",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "payroll_cutoff.clinique_saint_luc",
+   "docId": "DOC-079",
+   "value": "18th of the month",
+   "quote": "Les prestations de la Clinique Saint-Luc ASBL doivent parvenir à Payroll Ops BE au plus tard le 18 de chaque mois.",
+   "appliesTo": "Clinique Saint-Luc ASBL",
+   "clusterId": "C-10",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "payroll_cutoff.clinique_saint_luc",
+   "docId": "DOC-080",
+   "value": "15th of the month",
+   "quote": "À partir d'octobre, la clôture de la Clinique Saint-Luc est le 15 du mois",
+   "appliesTo": "Clinique Saint-Luc ASBL",
+   "clusterId": "C-10",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "payroll_cutoff.bakkerij_janssens",
+   "docId": "DOC-081",
+   "value": "25th of the month",
+   "quote": "Bakkerij Janssens BV bezorgt de prestaties elke maand ten laatste op de 25e.",
+   "appliesTo": "Bakkerij Janssens BV",
+   "clusterId": "C-10",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "payroll_cutoff.bakkerij_janssens",
+   "docId": "DOC-082",
+   "value": "25th of the month",
+   "quote": "De afsluiting voor Bakkerij Janssens BV valt op de 25e van de maand.",
+   "appliesTo": "Bakkerij Janssens BV",
+   "clusterId": "C-10",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "meal_vouchers.max_face_value",
+   "docId": "DOC-012",
+   "value": "€10.00",
+   "quote": "De maximale nominale waarde van een maaltijdcheque bedraagt EUR 10,00 per gewerkte dag.",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "meal_vouchers.employee_contribution",
+   "docId": "DOC-012",
+   "value": "€1.09",
+   "quote": "De werknemer betaalt minimaal EUR 1,09 per cheque",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "meal_vouchers.max_face_value",
+   "docId": "DOC-013",
+   "value": "€8.00",
+   "quote": "Valeur faciale maximale : EUR 8,00 par jour presté.",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "meal_vouchers.employee_contribution",
+   "docId": "DOC-013",
+   "value": "€1.09",
+   "quote": "Intervention minimale du travailleur : EUR 1,09.",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "meal_vouchers.max_face_value",
+   "docId": "DOC-014",
+   "value": "€8.00",
+   "quote": "Het maximum is EUR 8,00 per dag",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "meal_vouchers.employee_contribution",
+   "docId": "DOC-015",
+   "value": "€1.09",
+   "quote": "Le travailleur paie au minimum EUR 1,09 par titre-repas.",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": true,
+   "consistentExtra": false
+  },
+  {
+   "claimId": "meal_vouchers.max_face_value",
+   "docId": "DOC-016",
+   "value": "€10.00",
+   "quote": "The order file contains 238 vouchers with a total face value of EUR 2,380.00",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "meal_vouchers.max_face_value",
+   "docId": "DOC-017",
+   "value": "€10.00",
+   "quote": "Voor 8 halve dagen in april is dat 8 x EUR 10,00 = EUR 80,00 nominaal.",
+   "appliesTo": "PC 118",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "meal_vouchers.max_face_value",
+   "docId": "DOC-018",
+   "value": "€10.00",
+   "quote": "De maximale nominale waarde van een maaltijdcheque bedraagt EUR 10,00 per gewerkte dag.",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  },
+  {
+   "claimId": "meal_vouchers.employee_contribution",
+   "docId": "DOC-018",
+   "value": "€1.09",
+   "quote": "De werknemer betaalt minimaal EUR 1,09 per cheque",
+   "clusterId": "C-02",
+   "quoteInPdf": true,
+   "matchesPlanted": false,
+   "consistentExtra": true
+  }
+ ],
+ "missed": [
+  {
+   "id": "CI-005",
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-003",
+   "value": "1 January 2026"
+  },
+  {
+   "id": "CI-006",
+   "claimId": "indexation_cap.threshold",
+   "docId": "DOC-003",
+   "value": "€4,500.00"
+  },
+  {
+   "id": "CI-007",
+   "claimId": "indexation_cap.start_date",
+   "docId": "DOC-004",
+   "value": "1 July 2026"
+  },
+  {
+   "id": "CI-015",
+   "claimId": "meal_vouchers.max_face_value",
+   "docId": "DOC-020",
+   "value": "€15.00"
+  },
+  {
+   "id": "CI-017",
+   "claimId": "home_working.max_allowance",
+   "docId": "DOC-022",
+   "value": "€154.74"
+  },
+  {
+   "id": "CI-019",
+   "claimId": "eco_cheques.part_time",
+   "docId": "DOC-030",
+   "value": "Pro rata of working time"
+  },
+  {
+   "id": "CI-021",
+   "claimId": "eco_cheques.part_time",
+   "docId": "DOC-031",
+   "value": "Full amount"
+  },
+  {
+   "id": "CI-029",
+   "claimId": "voluntary_overtime.annual_hours",
+   "docId": "DOC-046",
+   "value": "240 hours"
+  },
+  {
+   "id": "CI-032",
+   "claimId": "voluntary_overtime.annual_hours",
+   "docId": "DOC-050",
+   "value": "220 hours"
+  },
+  {
+   "id": "CI-036",
+   "claimId": "year_end_bonus.payment_month",
+   "docId": "DOC-056",
+   "value": "November pay"
+  },
+  {
+   "id": "CI-041",
+   "claimId": "km_allowance.rate",
+   "docId": "DOC-068",
+   "value": "€0.30/km"
+  },
+  {
+   "id": "CI-045",
+   "claimId": "flexi_jobs.min_hourly_wage",
+   "docId": "DOC-071",
+   "value": "€12.05"
+  },
+  {
+   "id": "CI-057",
+   "claimId": "notice_period.five_years",
+   "docId": "DOC-093",
+   "value": "2 months"
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* Light product look: white canvas, zinc-gray panels, hairline borders, black buttons, small playful colour accents. */
+:root {
+  --bg: #ffffff;
+  --canvas: #f5f5f6;
+  --canvas-2: #efeff1;
+  --line: #e6e6ea;
+  --line-strong: #d4d4d8;
+  --ink: #0b0b0c;
+  --ink-2: #3f3f46;
+  --muted: #71717a;
+  --faint: #a1a1aa;
+
+  --agent: #7c3aed;
+  --agent-soft: #f2edfe;
+  --settled: #16a34a;
+  --settled-soft: #e8f6ed;
+  --conflict: #e5484d;
+  --conflict-soft: #fdecec;
+  --warn: #d97706;
+  --warn-soft: #fdf3e2;
+
+  --pink: #ec4899;
+  --blue: #2563eb;
+  --orange: #f97316;
+  --green: #22c55e;
+  --yellow: #eab308;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-canvas: var(--canvas);
+  --color-canvas-2: var(--canvas-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-agent: var(--agent);
+  --color-agent-soft: var(--agent-soft);
+  --color-settled: var(--settled);
+  --color-settled-soft: var(--settled-soft);
+  --color-conflict: var(--conflict);
+  --color-conflict-soft: var(--conflict-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-pink: var(--pink);
+  --color-blue: var(--blue);
+  --color-orange: var(--orange);
+  --color-green: var(--green);
+  --color-yellow: var(--yellow);
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --shadow-card: 0 1px 2px rgba(10, 10, 12, 0.04);
+  --shadow-pop: 0 1px 2px rgba(10, 10, 12, 0.05), 0 16px 40px -20px rgba(10, 10, 12, 0.22);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-geist), system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* headlines: medium weight, tight tracking; combine with <span class="text-faint"> for the two-tone effect */
+.headline {
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+/* big stat numbers: light and tabular */
+.stat {
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.num {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+mark.quote {
+  background: var(--agent-soft);
+  color: var(--agent);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+::selection {
+  background: var(--agent-soft);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
