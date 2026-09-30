@@ -28,7 +28,9 @@ This is a hackathon proof of concept meant to run locally: there is no authentic
 
 ## Scanning
 
-The repository is scanned with [Aikido](https://www.aikido.dev/) (AI code analysis). Findings are reviewed and fixed before submission.
+This repository is connected to [Aikido](https://www.aikido.dev/). We requested an Aikido AI Code Analysis (Code Security audit, hackathon credits) on 30 Sept 2026 at 21:57 CEST. At submission (22:30 CEST) Aikido still showed it as "Scheduled: your scan is queued and will start automatically", so there are no Aikido findings to report or fix yet. We will review and fix its findings once the scan runs.
+
+Meanwhile we ran our own checks: `npm audit` on `package-lock.json` reports 0 known vulnerabilities (0 critical, 0 high, 0 moderate, 0 low), and a secret-pattern scan of the full git history found no keys or tokens. The published repository has a fresh history, and every sync to it is refused if it contains a `.env`/`.pem` file or a key pattern.
 
 ## Reporting
 
